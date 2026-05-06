@@ -1,0 +1,28 @@
+# Java
+target/
+*.class
+*.jar
+*.war
+*.log
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Maven
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Claude
+.claude/

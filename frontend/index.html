@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>坦克大战 - Java面试题版</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas" width="640" height="480"></canvas>
+        <div id="hud">
+            <div id="hud-left">
+                <span id="hp-bar">HP: 100</span>
+                <span id="atk-bar">ATK: 10</span>
+            </div>
+            <div id="hud-right">
+                <span id="score">Score: 0</span>
+                <span id="enemies">Enemies: 5</span>
+            </div>
+        </div>
+        <div id="menu-overlay" class="overlay">
+            <div class="menu-box">
+                <h1>坦克大战</h1>
+                <p>Java面试题版</p>
+                <input type="text" id="player-name" placeholder="输入昵称" maxlength="20">
+                <button id="btn-start">开始游戏</button>
+                <button id="btn-notebook">错题本</button>
+            </div>
+        </div>
+        <div id="quiz-overlay" class="overlay hidden">
+            <div class="quiz-box">
+                <div id="quiz-timer">30</div>
+                <div id="quiz-category"></div>
+                <h2 id="quiz-content"></h2>
+                <div id="quiz-options">
+                    <button class="quiz-option" data-option="A"></button>
+                    <button class="quiz-option" data-option="B"></button>
+                    <button class="quiz-option" data-option="C"></button>
+                    <button class="quiz-option" data-option="D"></button>
+                </div>
+                <div id="quiz-result" class="hidden">
+                    <p id="quiz-result-text"></p>
+                    <p id="quiz-explanation"></p>
+                    <button id="quiz-continue">继续游戏</button>
+                </div>
+            </div>
+        </div>
+        <div id="notebook-overlay" class="overlay hidden">
+            <div class="notebook-box">
+                <h2>错题本</h2>
+                <div id="notebook-list"></div>
+                <button id="notebook-close">关闭</button>
+            </div>
+        </div>
+        <div id="gameover-overlay" class="overlay hidden">
+            <div class="menu-box">
+                <h1 id="gameover-title">游戏结束</h1>
+                <div id="gameover-stats"></div>
+                <button id="btn-restart">重新开始</button>
+                <button id="btn-back-menu">返回菜单</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
